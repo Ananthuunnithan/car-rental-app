@@ -26,11 +26,9 @@ const HomePage = () => {
                         <div className="card shadow p-4 text-center">
                             <h3>Add Cars</h3>
 
-                            <button
-                                type="button"
-                                className="btn btn-outline-primary">
+                            <a href="/add" className="btn btn-outline-primary">
                                 Add Car
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -39,11 +37,9 @@ const HomePage = () => {
                         <div className="card shadow p-4 text-center">
                             <h3>View Cars</h3>
 
-                            <button
-                                type="button"
-                                className="btn btn-success">
+                            <a href="/view" className="btn btn-success">
                                 View Cars
-                            </button>
+                            </a>
                         </div>
                     </div>
 

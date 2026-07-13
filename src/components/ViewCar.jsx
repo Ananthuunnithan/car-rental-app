@@ -38,7 +38,7 @@ const ViewCar = () => {
                     {data.map(
                         (value, index) => {
                             return (
-                                <tr>
+                                <tr key={value.id}>
                                     <th scope="row">{value.registration_number}</th>
                                     <td>{value.brand}</td>
                                     <td>{value.model}</td>
