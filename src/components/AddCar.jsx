@@ -1,0 +1,90 @@
+import React from 'react'
+
+const AddCar = () => {
+    return (
+        <div>
+
+            <div className="container mt-4 mb-4">
+                <div className="row">
+                    <div className="col col-12">
+
+                        <div className="row g-4">
+                            <div className="col col-12 col-sm-6 col-md-4">
+
+                                <label htmlFor="" className="form-label">Registration Number</label>
+                                <input type="text" className="form-control" name="course_name" placeholder="Registration Number" value={input.registration_number} onChange={inputHandler} />
+
+                            </div>
+                            <div className="col col-12 col-sm-6 col-md-4">
+
+                                <label htmlFor="" className="form-label">Brand</label>
+                                <input type="text" className="form-control" name="duration" placeholder="Brand" value={input.brand} onChange={inputHandler} />
+
+                            </div>
+                            <div className="col col-12 col-sm-6 col-md-4">
+
+                                <label htmlFor="" className="form-label">Model</label>
+                                <input type="text" className="form-control" name="fee" placeholder="Model" value={input.model} onChange={inputHandler} />
+
+                            </div>
+                            <div className="col col-12 col-sm-6 col-md-4">
+
+                                <label htmlFor="" className="form-label">Vehicle Type</label>
+                                <select id="" className="form-select" name="mode" placeholder="select" value={input.vehicle_type} onChange={inputHandler}>
+                                    <option value="Hatchback">Hatchback</option>
+                                    <option value="Sedan">Sedan</option>
+                                    <option value="SUV">SUV</option>
+                                    <option value="MUV">MUV</option>
+                                    <option value="Luxury">Luxury</option>
+                                </select>
+
+                            </div>
+                            <div className="col col-12 col-sm-6 col-md-4">
+
+                                <label htmlFor="" className="form-label">Fuel Type</label>
+                                <select id="" className="form-select" name="mode" placeholder="select" value={input.fuel_type} onChange={inputHandler}>
+                                    <option value="Petrol">Petrol</option>
+                                    <option value="Diesel">Diesel</option>
+                                    <option value="Electric">Electric</option>
+                                    <option value="Hybrid">Hybrid</option>
+                                    <option value="CNG">CNG</option>
+                                </select>
+
+                            </div>
+                            <div className="col col-12 col-sm-6 col-md-4">
+
+                                <label htmlFor="" className="form-label">Transmission</label>
+                                <select name="" id="" className="form-select" placeholder="select" value={input.transmission} onChange={inputHandler}>
+                                    <option value="Manual">Manual</option>
+                                    <option value="Automatic">Automatic</option>
+                                </select>
+
+                            </div>
+                            <div className="col col-12 col-sm-6 col-md-4">
+                                <label htmlFor="" className="form-form">Seating Capacity</label>
+                                <input type="text" className="form-control" placeholder="Seats" value={input.seating_capacity} onChange={inputHandler} />
+                            </div>
+                            <div className="col col-12 col-sm-6 col-md-4">
+                                <label htmlFor="" className="form-form">Rent per day</label>
+                                <input type="text" className="form-control" placeholder="Rent" value={input.rent_per_day} onChange={inputHandler} />
+                            </div>
+                            <div className="col col-12 col-sm-6 col-md-4">
+                                <label htmlFor="" className="form-form">City</label>
+                                <input type="text" className="form-control" placeholder="City" value={input.city} onChange={inputHandler} />
+                            </div>
+                            <div className="col col-12">
+
+                                <button className="btn btn-success" onClick={readValue}>Submit</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    )
+}
+
+export default AddCar
