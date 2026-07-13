@@ -24,7 +24,7 @@ const AddCar = () => {
         axios.post("https://host-demo-app.onrender.com/api/add-car",input).then(
             (response)=>{
                 console.log(response.data)
-                alert("Course added successfully")
+                alert("Car added successfully")
             }
         ).catch()
     }
@@ -39,25 +39,25 @@ const AddCar = () => {
                             <div className="col col-12 col-sm-6 col-md-4">
 
                                 <label htmlFor="" className="form-label">Registration Number</label>
-                                <input type="text" className="form-control" name="course_name" placeholder="Registration Number" value={input.registration_number} onChange={inputHandler} />
+                                <input type="text" className="form-control" name="registration_number" placeholder="Registration Number" value={input.registration_number} onChange={inputHandler} />
 
                             </div>
                             <div className="col col-12 col-sm-6 col-md-4">
 
                                 <label htmlFor="" className="form-label">Brand</label>
-                                <input type="text" className="form-control" name="duration" placeholder="Brand" value={input.brand} onChange={inputHandler} />
+                                <input type="text" className="form-control" name="brand" placeholder="Brand" value={input.brand} onChange={inputHandler} />
 
                             </div>
                             <div className="col col-12 col-sm-6 col-md-4">
 
                                 <label htmlFor="" className="form-label">Model</label>
-                                <input type="text" className="form-control" name="fee" placeholder="Model" value={input.model} onChange={inputHandler} />
+                                <input type="text" className="form-control" name="model" placeholder="Model" value={input.model} onChange={inputHandler} />
 
                             </div>
                             <div className="col col-12 col-sm-6 col-md-4">
 
                                 <label htmlFor="" className="form-label">Vehicle Type</label>
-                                <select id="" className="form-select" name="mode" placeholder="select" value={input.vehicle_type} onChange={inputHandler}>
+                                <select id="" className="form-select" name="vehicle_type" placeholder="select" value={input.vehicle_type} onChange={inputHandler}>
                                     <option value="Hatchback">Hatchback</option>
                                     <option value="Sedan">Sedan</option>
                                     <option value="SUV">SUV</option>
@@ -69,7 +69,7 @@ const AddCar = () => {
                             <div className="col col-12 col-sm-6 col-md-4">
 
                                 <label htmlFor="" className="form-label">Fuel Type</label>
-                                <select id="" className="form-select" name="mode" placeholder="select" value={input.fuel_type} onChange={inputHandler}>
+                                <select id="" className="form-select" name="fuel_type" placeholder="select" value={input.fuel_type} onChange={inputHandler}>
                                     <option value="Petrol">Petrol</option>
                                     <option value="Diesel">Diesel</option>
                                     <option value="Electric">Electric</option>
@@ -81,7 +81,7 @@ const AddCar = () => {
                             <div className="col col-12 col-sm-6 col-md-4">
 
                                 <label htmlFor="" className="form-label">Transmission</label>
-                                <select name="" id="" className="form-select" placeholder="select" value={input.transmission} onChange={inputHandler}>
+                                <select name="transmission" id="" className="form-select" placeholder="select" value={input.transmission} onChange={inputHandler}>
                                     <option value="Manual">Manual</option>
                                     <option value="Automatic">Automatic</option>
                                 </select>
@@ -89,15 +89,15 @@ const AddCar = () => {
                             </div>
                             <div className="col col-12 col-sm-6 col-md-4">
                                 <label htmlFor="" className="form-form">Seating Capacity</label>
-                                <input type="text" className="form-control" placeholder="Seats" value={input.seating_capacity} onChange={inputHandler} />
+                                <input type="text" className="form-control" placeholder="Seats" name="seating_capacity" value={input.seating_capacity} onChange={inputHandler} />
                             </div>
                             <div className="col col-12 col-sm-6 col-md-4">
                                 <label htmlFor="" className="form-form">Rent per day</label>
-                                <input type="text" className="form-control" placeholder="Rent" value={input.rent_per_day} onChange={inputHandler} />
+                                <input type="text" className="form-control" placeholder="Rent" name="rent_per_day" value={input.rent_per_day} onChange={inputHandler} />
                             </div>
                             <div className="col col-12 col-sm-6 col-md-4">
                                 <label htmlFor="" className="form-form">City</label>
-                                <input type="text" className="form-control" placeholder="City" value={input.city} onChange={inputHandler} />
+                                <input type="text" className="form-control" placeholder="City" name="city" value={input.city} onChange={inputHandler} />
                             </div>
                             <div className="col col-12">
 
