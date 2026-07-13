@@ -1,6 +1,32 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useState } from 'react'
 
 const AddCar = () => {
+    const[input,changeInput]=useState(
+        {
+            registration_number: "",  
+            brand: "",  
+            model: "",  
+            vehicle_type: "",  
+            fuel_type: "",  
+            transmission: "",  
+            seating_capacity: "",  
+            rent_per_day: "",  
+            city: "",
+        }
+    )
+    const inputHandler=(event)=>{
+        changeInput({...input,[event.target.name]:event.target.value})
+    }
+    const readValue=()=>{
+        console.log(input)
+        axios.post("https://host-demo-app.onrender.com/api/add-car",input).then(
+            (response)=>{
+                console.log(response.data)
+                alert("Course added successfully")
+            }
+        ).catch()
+    }
     return (
         <div>
 
