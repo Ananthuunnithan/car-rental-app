@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import NavBar from './NavBar'
 
 const ViewCar = () => {
     const[data,changeData]=useState([])
@@ -18,7 +19,7 @@ const ViewCar = () => {
     )
     return (
         <div>
-
+<NavBar/>
             <table class="table">
                 <thead>
                     <tr>
