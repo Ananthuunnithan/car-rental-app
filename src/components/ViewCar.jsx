@@ -20,12 +20,13 @@ const ViewCar = () => {
     return (
         <div>
 <NavBar/>
-            <table class="table">
-                <thead>
+            <table class="table text-center justify-content">
+                <thead className="table-dark" >
                     <tr>
                         <th scope="col">Registration Number</th>
                         <th scope="col">Brand</th>
                         <th scope="col">Model</th>
+                        <th scope="col">Vehicle Type</th>
                         <th scope="col">Fuel Type</th>
                         <th scope="col">Transmission</th>
                         <th scope="col">Seating Capacity</th>
