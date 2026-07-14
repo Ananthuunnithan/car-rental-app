@@ -3,34 +3,38 @@ import React, { useState } from 'react'
 import NavBar from './NavBar'
 
 const AddCar = () => {
-    const[input,changeInput]=useState(
+    const [input, changeInput] = useState(
         {
-            registration_number: "",  
-            brand: "",  
-            model: "",  
-            vehicle_type: "",  
-            fuel_type: "",  
-            transmission: "",  
-            seating_capacity: "",  
-            rent_per_day: "",  
+            registration_number: "",
+            brand: "",
+            model: "",
+            vehicle_type: "",
+            fuel_type: "",
+            transmission: "",
+            seating_capacity: "",
+            rent_per_day: "",
             city: "",
         }
     )
-    const inputHandler=(event)=>{
-        changeInput({...input,[event.target.name]:event.target.value})
+    const inputHandler = (event) => {
+        changeInput({ ...input, [event.target.name]: event.target.value })
     }
-    const readValue=()=>{
+    const readValue = () => {
         console.log(input)
-        axios.post("https://host-demo-app.onrender.com/api/add-car",input).then(
-            (response)=>{
+        axios.post("https://host-demo-app.onrender.com/api/add-car", input).then(
+            (response) => {
                 console.log(response.data)
                 alert("Car added successfully")
             }
-        ).catch()
+        ).catch(
+            (error) => {
+                console.log(error.response.data);
+                alert(error.response.data.message);
+            })
     }
     return (
         <div>
-<NavBar/>
+            <NavBar />
             <div className="container mt-4 mb-4">
                 <div className="row">
                     <div className="col col-12">
@@ -58,6 +62,7 @@ const AddCar = () => {
 
                                 <label htmlFor="" className="form-label">Vehicle Type</label>
                                 <select id="" className="form-select" name="vehicle_type" placeholder="select" value={input.vehicle_type} onChange={inputHandler}>
+                                    <option value="">Select Vehicle Type</option>
                                     <option value="Hatchback">Hatchback</option>
                                     <option value="Sedan">Sedan</option>
                                     <option value="SUV">SUV</option>
@@ -70,6 +75,7 @@ const AddCar = () => {
 
                                 <label htmlFor="" className="form-label">Fuel Type</label>
                                 <select id="" className="form-select" name="fuel_type" placeholder="select" value={input.fuel_type} onChange={inputHandler}>
+                                    <option value="">Select Fuel Type</option>
                                     <option value="Petrol">Petrol</option>
                                     <option value="Diesel">Diesel</option>
                                     <option value="Electric">Electric</option>
@@ -82,6 +88,7 @@ const AddCar = () => {
 
                                 <label htmlFor="" className="form-label">Transmission</label>
                                 <select name="transmission" id="" className="form-select" placeholder="select" value={input.transmission} onChange={inputHandler}>
+                                    <option value="">Select Transmission</option>
                                     <option value="Manual">Manual</option>
                                     <option value="Automatic">Automatic</option>
                                 </select>

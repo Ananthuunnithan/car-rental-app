@@ -37,7 +37,7 @@ const HomePage = () => {
                         <div className="card shadow p-4 text-center">
                             <h3>View Cars</h3>
 
-                            <a href="/view" className="btn btn-success">
+                            <a href="/view" className="btn btn-outline-warning">
                                 View Cars
                             </a>
                         </div>
